@@ -129,16 +129,23 @@ function App() {
                 <Box sx={{ flex: 1 }}>
                   <Typography variant="overline" color="primary.main">03 / Contact us</Typography>
                   <Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography>
-                  <Typography color="text.secondary" sx={{ mt: 4, maxWidth: 430 }}>Have an automation idea or a custom machine requirement? Get in touch with us to discuss your requirements.</Typography>
+                  <Typography color="text.secondary" sx={{ mt: 4, maxWidth: 430 }}>Have an automation idea or a custom machine requirement? Get in touch with us at any of our offices below.</Typography>
                 </Box>
-                <Stack spacing={4} sx={{ minWidth: { lg: 330 } }}>
+                <Stack spacing={4} sx={{ minWidth: { lg: 380 } }}>
                   <Box>
-                    <Typography variant="overline" color="text.secondary">Email</Typography>
-                    <Link href="mailto:swajarobotics@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>swajarobotics@swaja.com</Link>
+                    <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700 }}>Meerut Office (R&D and Production)</Typography>
+                    <Typography sx={{ mt: 1, color: 'text.secondary', fontSize: '0.95rem' }}>B-8 Rajender Puram, Mawana Road,<br />Meerut 250001, Uttar Pradesh, India</Typography>
+                    <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1rem' }}>Info@swaja.com</Link>
                   </Box>
                   <Box>
-                    <Typography variant="overline" color="text.secondary">Location</Typography>
-                    <Typography sx={{ mt: 1, maxWidth: 260 }}>Rajendrapuram, Ganga Nagar,<br />Meerut, Uttar Pradesh, India</Typography>
+                    <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700 }}>Bangalore Office</Typography>
+                    <Typography sx={{ mt: 1, color: 'text.secondary', fontSize: '0.95rem' }}>4th Floor, 331, 5B Rd, EPIP Zone, Whitefield,<br />Bengaluru, Karnataka 560066</Typography>
+                    <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1rem' }}>Info@swaja.com</Link>
+                  </Box>
+                  <Box>
+                    <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700 }}>Hyderabad Office</Typography>
+                    <Typography sx={{ mt: 1, color: 'text.secondary', fontSize: '0.95rem' }}>Plot No 1339, Road No. 67 Jubilee Hills,<br />Hyderabad, Telangana 500033, India</Typography>
+                    <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1rem' }}>Info@swaja.com</Link>
                   </Box>
                   <Box>
                     <Typography variant="overline" color="text.secondary">Website</Typography>
