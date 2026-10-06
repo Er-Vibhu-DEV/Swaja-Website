@@ -10,7 +10,7 @@ const theme = createTheme({
     divider: '#d8eaf1',
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Space Grotesk", "Roboto", "Helvetica", "Arial", sans-serif',
     h1: { fontSize: 'clamp(2.4rem, 7vw, 8.5rem)', fontWeight: 500, lineHeight: 0.96, letterSpacing: '-0.07em' },
     h2: { fontSize: 'clamp(2.2rem, 5vw, 6rem)', fontWeight: 500, lineHeight: 1, letterSpacing: '-0.06em' },
     h3: { fontSize: 'clamp(1.75rem, 3vw, 3rem)', fontWeight: 500, letterSpacing: '-0.04em' },
