@@ -1,11 +1,7 @@
 import { useEffect, useState } from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import EngineeringIcon from '@mui/icons-material/Engineering';
-import HubIcon from '@mui/icons-material/Hub';
 import MenuIcon from '@mui/icons-material/Menu';
-import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
-import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -28,15 +24,6 @@ const navItems: { label: string; id: SectionId }[] = [
   { label: 'Careers', id: 'careers' },
   { label: 'Contact', id: 'contact' },
 ];
-
-const disciplines = [
-  { title: 'Robotics', body: 'Intelligent robotic systems designed for practical applications.', icon: <PrecisionManufacturingIcon /> },
-  { title: 'Home Automation', body: 'Smart and connected automation solutions for modern environments.', icon: <HomeWorkIcon /> },
-  { title: 'Custom Machines', body: 'Purpose-built machines developed around specific requirements.', icon: <EngineeringIcon /> },
-  { title: 'Engineering & Automation', body: 'Integrated software, electronics, control systems and automation.', icon: <HubIcon /> },
-];
-
-const approach = ['Understand', 'Design', 'Engineer', 'Build', 'Innovate'];
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -103,9 +90,9 @@ function App() {
         <Box component="main">
           <Box id="home" component="section" sx={{ minHeight: { xs: 550, md: 680 }, bgcolor: 'background.default', color: 'text.primary', position: 'relative', display: 'flex', alignItems: 'center', pt: { xs: '72px', md: '88px' } }}>
             <Container maxWidth="xl" sx={{ position: 'relative', pt: { xs: 4, md: 8 }, pb: { xs: 7, md: 10 } }}>
-              <Box sx={{ position: 'relative', zIndex: 1, maxWidth: { xs: '100%', md: 820 }, pt: { xs: 2, md: 4 }, pb: { xs: 5, md: 10 } }}>
+              <Box sx={{ position: 'relative', zIndex: 1, maxWidth: { xs: '100%', md: 900 }, pt: { xs: 2, md: 4 }, pb: { xs: 5, md: 10 } }}>
                 <Stack direction="row" spacing={1.25} alignItems="center" sx={{ mb: 3 }}><Box sx={{ width: 34, height: 1, bgcolor: 'secondary.main' }} /><Typography variant="overline" sx={{ color: 'primary.main' }}>Robotics · Automation · Engineering</Typography></Stack>
-                <Typography component="h1" variant="h1" sx={{ maxWidth: 820 }}>Engineering<br /><Box component="span" sx={{ color: 'primary.main' }}>Beyond Limits.</Box></Typography>
+                <Typography component="h1" variant="h1" sx={{ maxWidth: 900 }}>Engineering <Box component="span" sx={{ color: 'primary.main' }}>Beyond Limits.</Box></Typography>
                 <Typography sx={{ maxWidth: 640, mt: 4, color: 'text.secondary', fontSize: { xs: '1rem', md: '1.16rem' } }}>We design and develop innovative robotics, home automation solutions, and custom machines that bring intelligent technology into everyday life.</Typography>
                 <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mt: 5, alignItems: { xs: 'stretch', sm: 'center' } }}>
                   <Button variant="contained" color="primary" onClick={() => goTo('about')} endIcon={<ArrowOutwardIcon />}>Explore our vision</Button>
@@ -127,20 +114,64 @@ function App() {
               </Box>
             </Box>
 
-            <Box component="section" sx={{ py: { xs: 10, md: 14 }, borderTop: 1, borderColor: 'divider' }}>
-              <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} justifyContent="space-between" sx={{ mb: 7 }}><Box><Typography variant="overline" color="primary.main">02 / What we do</Typography><Typography variant="h3" sx={{ mt: 2 }}>Ideas into intelligent systems.</Typography></Box><Typography color="text.secondary" sx={{ maxWidth: 360, alignSelf: 'flex-end' }}>Different disciplines. One focused approach to useful, considered technology.</Typography></Stack>
-              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }, borderTop: 1, borderLeft: 1, borderColor: 'divider' }}>{disciplines.map((item, index) => <Box key={item.title} sx={{ p: { xs: 3, md: 4 }, minHeight: 270, borderRight: 1, borderBottom: 1, borderColor: 'divider', transition: 'background 240ms ease', '&:hover': { bgcolor: 'rgba(12,108,112,0.06)' } }}><Box sx={{ color: index % 2 ? 'secondary.main' : 'primary.main', mb: 7 }}>{item.icon}</Box><Typography variant="h6" sx={{ fontWeight: 500 }}>{item.title}</Typography><Typography variant="body2" color="text.secondary" sx={{ mt: 1.5 }}>{item.body}</Typography></Box>)}</Box>
+            <Box id="careers" component="section" sx={{ py: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
+              <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 14 }}>
+                <Box sx={{ flex: 1 }}>
+                  <Typography variant="overline" color="primary.main">02 / Careers</Typography>
+                  <Typography variant="h2" sx={{ mt: 2 }}>Build the<br />future with us.</Typography>
+                </Box>
+                <Box sx={{ flex: 1, pt: { md: 5 } }}>
+                  <Typography variant="body1" color="text.secondary">At Swaja Robotics, we believe the future of technology is built by people who are curious, creative, and passionate about solving real-world problems.</Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>If you are interested in robotics, automation, electronics, software, or innovative engineering, we would love to hear from you.</Typography>
+                  <Button variant="contained" color="primary" sx={{ mt: 4 }} onClick={() => goTo('contact')} endIcon={<ArrowOutwardIcon />}>Get in touch</Button>
+                </Box>
+              </Stack>
             </Box>
 
-            <Box component="section" sx={{ py: { xs: 10, md: 14 } }}><Stack direction={{ xs: 'column', md: 'row' }} spacing={5} justifyContent="space-between"><Box><Typography variant="overline" color="primary.main">03 / Our approach</Typography><Typography variant="h3" sx={{ mt: 2, maxWidth: 560 }}>Built around the<br />right questions.</Typography></Box><Typography color="text.secondary" sx={{ maxWidth: 360 }}>Every project begins by understanding the requirement, then shaping the right path from first thought to finished machine.</Typography></Stack><Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(5, 1fr)' }, mt: 9, borderTop: 1, borderColor: 'divider' }}>{approach.map((step, index) => <Box key={step} sx={{ pt: 2.5, pb: { xs: 2, sm: 0 }, pr: 2, borderBottom: { xs: 1, sm: 0 }, borderColor: 'divider', position: 'relative' }}><Typography sx={{ color: 'secondary.main', fontSize: '0.78rem', mb: 5 }}>0{index + 1}</Typography><Typography sx={{ fontSize: { xs: '1.35rem', md: '1.05rem' }, fontWeight: 500 }}>{step}</Typography>{index < approach.length - 1 && <ArrowOutwardIcon sx={{ display: { xs: 'none', sm: 'block' }, position: 'absolute', right: 16, top: 20, fontSize: 18, color: 'primary.main' }} />}</Box>)}</Box></Box>
-
-            <Box id="careers" component="section" sx={{ py: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}><Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 14 }}><Box sx={{ flex: 1 }}><Typography variant="overline" color="primary.main">04 / Careers</Typography><Typography variant="h2" sx={{ mt: 2 }}>Build the<br />future with us.</Typography></Box><Box sx={{ flex: 1, pt: { md: 5 } }}><Typography variant="body1" color="text.secondary">At Swaja Robotics, we believe the future of technology is built by people who are curious, creative, and passionate about solving real-world problems.</Typography><Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>If you are interested in robotics, automation, electronics, software, or innovative engineering, we would love to hear from you.</Typography><Button variant="contained" color="primary" sx={{ mt: 4 }} onClick={() => goTo('contact')} endIcon={<ArrowOutwardIcon />}>Get in touch</Button></Box></Stack></Box>
-
-            <Box id="contact" component="section" sx={{ py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}><Stack direction={{ xs: 'column', lg: 'row' }} spacing={{ xs: 6, lg: 16 }}><Box sx={{ flex: 1 }}><Typography variant="overline" color="primary.main">05 / Contact us</Typography><Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography><Typography color="text.secondary" sx={{ mt: 4, maxWidth: 430 }}>Have an automation idea or a custom machine requirement? Get in touch with us to discuss your requirements.</Typography></Box><Stack spacing={4} sx={{ minWidth: { lg: 330 } }}><Box><Typography variant="overline" color="text.secondary">Email</Typography><Link href="mailto:swajarobotics@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>swajarobotics@swaja.com</Link></Box><Box><Typography variant="overline" color="text.secondary">Location</Typography><Typography sx={{ mt: 1, maxWidth: 260 }}>Rajendrapuram, Ganga Nagar,<br />Meerut, Uttar Pradesh, India</Typography></Box><Box><Typography variant="overline" color="text.secondary">Website</Typography><Link href="https://swaja.com" target="_blank" rel="noreferrer" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>swaja.com ↗</Link></Box></Stack></Stack></Box>
+            <Box id="contact" component="section" sx={{ py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
+              <Stack direction={{ xs: 'column', lg: 'row' }} spacing={{ xs: 6, lg: 16 }}>
+                <Box sx={{ flex: 1 }}>
+                  <Typography variant="overline" color="primary.main">03 / Contact us</Typography>
+                  <Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography>
+                  <Typography color="text.secondary" sx={{ mt: 4, maxWidth: 430 }}>Have an automation idea or a custom machine requirement? Get in touch with us to discuss your requirements.</Typography>
+                </Box>
+                <Stack spacing={4} sx={{ minWidth: { lg: 330 } }}>
+                  <Box>
+                    <Typography variant="overline" color="text.secondary">Email</Typography>
+                    <Link href="mailto:swajarobotics@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>swajarobotics@swaja.com</Link>
+                  </Box>
+                  <Box>
+                    <Typography variant="overline" color="text.secondary">Location</Typography>
+                    <Typography sx={{ mt: 1, maxWidth: 260 }}>Rajendrapuram, Ganga Nagar,<br />Meerut, Uttar Pradesh, India</Typography>
+                  </Box>
+                  <Box>
+                    <Typography variant="overline" color="text.secondary">Website</Typography>
+                    <Link href="https://swaja.com" target="_blank" rel="noreferrer" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>swaja.com ↗</Link>
+                  </Box>
+                </Stack>
+              </Stack>
+            </Box>
           </Container>
         </Box>
 
-        <Box component="footer" sx={{ bgcolor: 'primary.dark', color: 'common.white', py: 5 }}><Container maxWidth="xl"><Stack direction={{ xs: 'column', md: 'row' }} spacing={4} justifyContent="space-between" alignItems={{ md: 'center' }}><Box><Typography sx={{ fontWeight: 700, letterSpacing: '0.14em', fontSize: '0.85rem' }}>SWAJA ROBOTICS</Typography><Typography variant="body2" sx={{ mt: 1, color: 'rgba(255,255,255,0.55)' }}>Engineering Beyond Limits</Typography></Box><Stack direction="row" spacing={3} flexWrap="wrap">{navItems.slice(1).map((item) => <Link key={item.id} component="button" onClick={() => goTo(item.id)} underline="none" sx={{ color: 'rgba(255,255,255,0.68)', fontSize: '0.82rem', '&:hover': { color: 'secondary.main' } }}>{item.label}</Link>)}</Stack><IconButton onClick={() => goTo('home')} aria-label="Back to top" sx={{ color: 'secondary.main', border: 1, borderColor: 'rgba(214,167,86,0.5)' }}><ArrowUpwardIcon fontSize="small" /></IconButton></Stack><Divider sx={{ my: 4, borderColor: 'rgba(255,255,255,0.14)' }} /><Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.45)' }}>© 2021 Swaja Robotics Pvt. Ltd. All rights reserved.</Typography></Container></Box>
+        <Box component="footer" sx={{ bgcolor: 'primary.dark', color: 'common.white', py: 5 }}>
+          <Container maxWidth="xl">
+            <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} justifyContent="space-between" alignItems={{ md: 'center' }}>
+              <Box>
+                <Typography sx={{ fontWeight: 700, letterSpacing: '0.14em', fontSize: '0.85rem' }}>SWAJA ROBOTICS</Typography>
+                <Typography variant="body2" sx={{ mt: 1, color: 'rgba(255,255,255,0.55)' }}>Engineering Beyond Limits</Typography>
+              </Box>
+              <Stack direction="row" spacing={3} flexWrap="wrap">
+                {navItems.slice(1).map((item) => <Link key={item.id} component="button" onClick={() => goTo(item.id)} underline="none" sx={{ color: 'rgba(255,255,255,0.68)', fontSize: '0.82rem', '&:hover': { color: 'secondary.main' } }}>{item.label}</Link>)}
+              </Stack>
+              <IconButton onClick={() => goTo('home')} aria-label="Back to top" sx={{ color: 'secondary.main', border: 1, borderColor: 'rgba(214,167,86,0.5)' }}>
+                <ArrowUpwardIcon fontSize="small" />
+              </IconButton>
+            </Stack>
+            <Divider sx={{ my: 4, borderColor: 'rgba(255,255,255,0.14)' }} />
+            <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.45)' }}>© 2021 Swaja Robotics Pvt. Ltd. All rights reserved.</Typography>
+          </Container>
+        </Box>
       </Box>
     </ThemeProvider>
   );
