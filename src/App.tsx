@@ -88,7 +88,7 @@ function App() {
         </Drawer>
 
         <Box component="main">
-          <Box id="home" component="section" sx={{ minHeight: { xs: 450, md: 580 }, bgcolor: 'background.default', color: 'text.primary', position: 'relative', display: 'flex', alignItems: 'center', pt: { xs: '72px', md: '88px' } }}>
+          <Box id="home" component="section" sx={{ scrollMarginTop: { xs: '72px', md: '88px' }, minHeight: { xs: 450, md: 580 }, bgcolor: 'background.default', color: 'text.primary', position: 'relative', display: 'flex', alignItems: 'center', pt: { xs: '72px', md: '88px' } }}>
             <Container maxWidth="xl" sx={{ position: 'relative', pt: { xs: 2, md: 4 }, pb: { xs: 3, md: 5 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
               <Box sx={{ position: 'relative', zIndex: 1, maxWidth: { xs: '100%', md: 900 }, pt: 0, pb: { xs: 2, md: 4 }, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography component="h1" variant="h1" sx={{ maxWidth: 900, color: '#000000' }}>Swaja <Box component="span" sx={{ color: '#ffffff', bgcolor: '#000000', px: 1.5, py: 0.5, borderRadius: 1, display: 'inline-block' }}>Robotics</Box></Typography>
@@ -100,7 +100,7 @@ function App() {
           </Box>
 
           <Container maxWidth="xl">
-            <Box id="about" component="section" sx={{ pt: { xs: 4, md: 6 }, pb: { xs: 10, md: 18 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <Box id="about" component="section" sx={{ scrollMarginTop: { xs: '72px', md: '88px' }, pt: { xs: 4, md: 6 }, pb: { xs: 10, md: 18 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
               <Box sx={{ maxWidth: 800, mx: 'auto' }}>
                 <Typography variant="overline" color="primary.main">01 / About us</Typography>
                 <Typography variant="h2" sx={{ mt: 2, mx: 'auto' }}>Bridging technology for India's future.</Typography>
@@ -110,7 +110,7 @@ function App() {
               </Box>
             </Box>
 
-            <Box id="careers" component="section" sx={{ py: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
+            <Box id="careers" component="section" sx={{ scrollMarginTop: { xs: '72px', md: '88px' }, py: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
               <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 14 }}>
                 <Box sx={{ flex: 1 }}>
                   <Typography variant="overline" color="primary.main">02 / Careers</Typography>
@@ -124,7 +124,7 @@ function App() {
               </Stack>
             </Box>
 
-            <Box id="contact" component="section" sx={{ py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
+            <Box id="contact" component="section" sx={{ scrollMarginTop: { xs: '72px', md: '88px' }, py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
               <Box sx={{ mb: 8 }}>
                 <Typography variant="overline" color="primary.main">03 / Contact us</Typography>
                 <Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography>
