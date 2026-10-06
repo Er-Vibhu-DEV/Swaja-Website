@@ -185,8 +185,7 @@ function App() {
                       ))}
                     </Box>
                     <Typography variant="subtitle2" sx={{ fontWeight: 700, color: 'text.primary', mb: 1 }}>Desired skill set</Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary', mb: 4 }}>{job.skills}</Typography>
-                    <Button variant="outlined" color="primary" href={`mailto:Info@swaja.com?subject=Application for ${job.title}`} sx={{ alignSelf: 'flex-start', mt: 'auto' }} endIcon={<ArrowOutwardIcon />}>Apply now</Button>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>{job.skills}</Typography>
                   </Box>
                 ))}
               </Box>
