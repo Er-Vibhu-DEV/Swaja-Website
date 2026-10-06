@@ -28,7 +28,7 @@ const navItems: { label: string; id: SectionId }[] = [
 const careerOpenings = [
   {
     title: 'Software Engineer',
-    location: 'Bengaluru / Meerut / Hyderabad',
+    location: 'Meerut',
     responsibilities: [
       'Strong CS fundamentals in algorithms, data structures, and systems programming. Passion for coding, creating complex systems from scratch and designing for scale.',
       'Knowledge of large scale distributed systems, system coding using Java, Rust, or C++. Experience building high-performance solutions.'
@@ -37,7 +37,7 @@ const careerOpenings = [
   },
   {
     title: 'Application Developer',
-    location: 'Bengaluru / Meerut',
+    location: 'Meerut',
     responsibilities: [
       'Design, build, and maintain high performance, reusable, and reliable application code.',
       'Collaborate with cross-functional teams to define, design, and ship new features for robotics and automation interfaces.'
@@ -46,7 +46,7 @@ const careerOpenings = [
   },
   {
     title: 'Embedded Engineer',
-    location: 'Meerut / Bengaluru',
+    location: 'Meerut',
     responsibilities: [
       'Develop firmware and embedded software for advanced robotic systems and custom controllers.',
       'Interface sensors, actuators, and communication protocols (UART, SPI, I2C, CAN).'
@@ -55,7 +55,7 @@ const careerOpenings = [
   },
   {
     title: 'Electronics Engineer',
-    location: 'Meerut (R&D)',
+    location: 'Meerut',
     responsibilities: [
       'Design and test schematic PCBs, circuit boards, power electronics, and control systems.',
       'Perform hardware testing, circuit simulation, and validation for automated hardware.'
@@ -64,7 +64,7 @@ const careerOpenings = [
   },
   {
     title: 'New Product Design',
-    location: 'Meerut / Bangalore',
+    location: 'Meerut',
     responsibilities: [
       'Conceptualize and engineer innovative products from initial idea to prototype and production.',
       'Integrate mechanical housing, electronics packaging, and ergonomic user-focused design.'
@@ -73,7 +73,7 @@ const careerOpenings = [
   },
   {
     title: 'Mechanical Engineer',
-    location: 'Meerut (Production)',
+    location: 'Meerut',
     responsibilities: [
       'Design mechanical structures, linkages, and housings for robotic arms and custom machines.',
       'Perform structural analysis, thermal management, and kinematic simulations.'
