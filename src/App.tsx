@@ -165,10 +165,10 @@ function App() {
             </Box>
 
             <Box id="careers" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, py: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
-              <Box sx={{ mb: 8 }}>
+              <Box sx={{ mb: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <Typography variant="overline" color="primary.main">02 / Careers</Typography>
-                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Build the future with us.</Typography>
-                <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 600 }}>At Swaja Robotics, we believe the future of technology is built by people who are curious, creative, and passionate about solving real-world problems. Explore our open positions below.</Typography>
+                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640, mx: 'auto' }}>Build the future with us.</Typography>
+                <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 600, mx: 'auto' }}>At Swaja Robotics, we believe the future of technology is built by people who are curious, creative, and passionate about solving real-world problems. Explore our open positions below.</Typography>
               </Box>
 
               <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4 }}>
