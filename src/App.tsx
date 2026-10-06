@@ -192,10 +192,10 @@ function App() {
             </Box>
 
             <Box id="contact" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
-              <Box sx={{ mb: 8 }}>
+              <Box sx={{ mb: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <Typography variant="overline" color="primary.main">03 / Contact us</Typography>
-                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography>
-                <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 530 }}>Have an automation idea or a custom machine requirement? Get in touch with us at any of our offices below.</Typography>
+                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640, mx: 'auto' }}>Let's build the future together.</Typography>
+                <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 530, mx: 'auto' }}>Have an automation idea or a custom machine requirement? Get in touch with us at any of our offices below.</Typography>
               </Box>
 
               <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 4 }}>
