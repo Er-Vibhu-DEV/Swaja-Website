@@ -149,12 +149,11 @@ function App() {
                 <Stack direction="row" spacing={1.25} alignItems="center" justifyContent="center" sx={{ mt: 3, mb: 4 }}><Box sx={{ width: 34, height: 1, bgcolor: 'secondary.main' }} /><Typography variant="overline" sx={{ color: 'primary.main' }}>Robotics · Automation · Engineering</Typography></Stack>
                 <Typography sx={{ maxWidth: 640, mt: 3, color: 'text.secondary', fontSize: { xs: '1rem', md: '1.16rem' }, textAlign: 'center' }}>We design and develop innovative robotics, home automation solutions, and custom machines that bring intelligent technology into everyday life.</Typography>
               </Box>
-              <Typography sx={{ position: 'absolute', right: { xs: 24, md: 48 }, bottom: { xs: 28, md: 36 }, writingMode: 'vertical-rl', transform: 'rotate(180deg)', fontSize: '0.65rem', letterSpacing: '0.2em', color: 'primary.main', opacity: 0.65 }}>SWJ / 2021 — PRESENT</Typography>
             </Container>
           </Box>
 
           <Container maxWidth="xl">
-            <Box id="about" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, pt: { xs: 4, md: 6 }, pb: { xs: 10, md: 18 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <Box id="about" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, pt: { xs: 3, md: 4 }, pb: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
               <Box sx={{ maxWidth: 800, mx: 'auto' }}>
                 <Typography variant="overline" color="primary.main">01 / About us</Typography>
                 <Typography variant="h2" sx={{ mt: 2, mx: 'auto' }}>Bridging technology for India's future.</Typography>
@@ -164,16 +163,35 @@ function App() {
               </Box>
             </Box>
 
-            <Box id="careers" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, py: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
+            <Box id="careers" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, pt: { xs: 3, md: 4 }, pb: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
               <Box sx={{ mb: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <Typography variant="overline" color="primary.main">02 / Careers</Typography>
                 <Typography variant="h2" sx={{ mt: 2, maxWidth: 640, mx: 'auto' }}>Build the future with us.</Typography>
                 <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 600, mx: 'auto' }}>At Swaja Robotics, we believe the future of technology is built by people who are curious, creative, and passionate about solving real-world problems. Explore our open positions below.</Typography>
               </Box>
 
-              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4 }}>
+              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }, gap: 4 }}>
                 {careerOpenings.map((job) => (
-                  <Box key={job.title} sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 3, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <Box
+                    key={job.title}
+                    sx={{
+                      p: 4,
+                      bgcolor: 'background.paper',
+                      border: 1,
+                      borderColor: 'divider',
+                      borderRadius: 5,
+                      boxShadow: '0 12px 35px rgba(45,125,159,0.08)',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      height: '100%',
+                      transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)',
+                      '&:hover': {
+                        transform: 'translateY(-6px) scale(1.015)',
+                        boxShadow: '0 20px 45px rgba(45,125,159,0.16)',
+                        borderColor: 'primary.light',
+                      }
+                    }}
+                  >
                     <Typography variant="h5" sx={{ fontWeight: 700, color: '#d83b72', mb: 1 }}>{job.title}</Typography>
                     <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: 3, color: 'text.secondary' }}>
                       <Box component="span" sx={{ fontSize: '0.9rem' }}>📍 {job.location}</Box>
@@ -191,7 +209,7 @@ function App() {
               </Box>
             </Box>
 
-            <Box id="contact" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
+            <Box id="contact" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, pt: { xs: 3, md: 4 }, pb: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
               <Box sx={{ mb: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <Typography variant="overline" color="primary.main">03 / Contact us</Typography>
                 <Typography variant="h2" sx={{ mt: 2, maxWidth: 640, mx: 'auto' }}>Let's build the future together.</Typography>
@@ -199,21 +217,21 @@ function App() {
               </Box>
 
               <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 4 }}>
-                <Box sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 3, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <Box sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 5, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700, mb: 1 }}>Meerut Office</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, fontWeight: 500 }}>(R&D and Production)</Typography>
                   <Typography sx={{ mb: 3, color: 'text.secondary', fontSize: '0.95rem', lineHeight: 1.6 }}>B-8 Rajender Puram, Mawana Road,<br />Meerut 250001, Uttar Pradesh, India</Typography>
                   <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 'auto', fontSize: '1rem', fontWeight: 500 }}>Info@swaja.com</Link>
                 </Box>
 
-                <Box sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 3, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <Box sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 5, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700, mb: 1 }}>Bangalore Office</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, fontWeight: 500 }}>&nbsp;</Typography>
                   <Typography sx={{ mb: 3, color: 'text.secondary', fontSize: '0.95rem', lineHeight: 1.6 }}>4th Floor, 331, 5B Rd, EPIP Zone, Whitefield,<br />Bengaluru, Karnataka 560066</Typography>
                   <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 'auto', fontSize: '1rem', fontWeight: 500 }}>Info@swaja.com</Link>
                 </Box>
 
-                <Box sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 3, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <Box sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 5, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700, mb: 1 }}>Hyderabad Office</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, fontWeight: 500 }}>&nbsp;</Typography>
                   <Typography sx={{ mb: 3, color: 'text.secondary', fontSize: '0.95rem', lineHeight: 1.6 }}>Plot No 1339, Road No. 67 Jubilee Hills,<br />Hyderabad, Telangana 500033, India</Typography>
