@@ -25,6 +25,63 @@ const navItems: { label: string; id: SectionId }[] = [
   { label: 'Contact', id: 'contact' },
 ];
 
+const careerOpenings = [
+  {
+    title: 'Software Engineer',
+    location: 'Bengaluru / Meerut / Hyderabad',
+    responsibilities: [
+      'Strong CS fundamentals in algorithms, data structures, and systems programming. Passion for coding, creating complex systems from scratch and designing for scale.',
+      'Knowledge of large scale distributed systems, system coding using Java, Rust, or C++. Experience building high-performance solutions.'
+    ],
+    skills: '2+ years of key contribution to building systems or sophisticated products.'
+  },
+  {
+    title: 'Application Developer',
+    location: 'Bengaluru / Meerut',
+    responsibilities: [
+      'Design, build, and maintain high performance, reusable, and reliable application code.',
+      'Collaborate with cross-functional teams to define, design, and ship new features for robotics and automation interfaces.'
+    ],
+    skills: 'Proficiency in modern application frameworks, UI/UX principles, and API integrations.'
+  },
+  {
+    title: 'Embedded Engineer',
+    location: 'Meerut / Bengaluru',
+    responsibilities: [
+      'Develop firmware and embedded software for advanced robotic systems and custom controllers.',
+      'Interface sensors, actuators, and communication protocols (UART, SPI, I2C, CAN).'
+    ],
+    skills: 'Strong C/C++ programming, debugging skills, and hands-on microcontrollers experience.'
+  },
+  {
+    title: 'Electronics Engineer',
+    location: 'Meerut (R&D)',
+    responsibilities: [
+      'Design and test schematic PCBs, circuit boards, power electronics, and control systems.',
+      'Perform hardware testing, circuit simulation, and validation for automated hardware.'
+    ],
+    skills: 'Experience with PCB design tools (Altium, KiCad) and hardware testing equipment.'
+  },
+  {
+    title: 'New Product Design',
+    location: 'Meerut / Bangalore',
+    responsibilities: [
+      'Conceptualize and engineer innovative products from initial idea to prototype and production.',
+      'Integrate mechanical housing, electronics packaging, and ergonomic user-focused design.'
+    ],
+    skills: 'Proficiency in CAD modeling, prototyping, material science, and manufacturing processes.'
+  },
+  {
+    title: 'Mechanical Engineer',
+    location: 'Meerut (Production)',
+    responsibilities: [
+      'Design mechanical structures, linkages, and housings for robotic arms and custom machines.',
+      'Perform structural analysis, thermal management, and kinematic simulations.'
+    ],
+    skills: 'Expertise in SolidWorks/Fusion 360, DFM (Design for Manufacturing), and mechanical assembly.'
+  }
+];
+
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -108,17 +165,31 @@ function App() {
             </Box>
 
             <Box id="careers" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, py: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
-              <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 14 }}>
-                <Box sx={{ flex: 1 }}>
-                  <Typography variant="overline" color="primary.main">02 / Careers</Typography>
-                  <Typography variant="h2" sx={{ mt: 2 }}>Build the<br />future with us.</Typography>
-                </Box>
-                <Box sx={{ flex: 1, pt: { md: 5 } }}>
-                  <Typography variant="body1" color="text.secondary">At Swaja Robotics, we believe the future of technology is built by people who are curious, creative, and passionate about solving real-world problems.</Typography>
-                  <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>If you are interested in robotics, automation, electronics, software, or innovative engineering, we would love to hear from you.</Typography>
-                  <Button variant="contained" color="primary" sx={{ mt: 4 }} onClick={() => goTo('contact')} endIcon={<ArrowOutwardIcon />}>Get in touch</Button>
-                </Box>
-              </Stack>
+              <Box sx={{ mb: 8 }}>
+                <Typography variant="overline" color="primary.main">02 / Careers</Typography>
+                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Build the future with us.</Typography>
+                <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 600 }}>At Swaja Robotics, we believe the future of technology is built by people who are curious, creative, and passionate about solving real-world problems. Explore our open positions below.</Typography>
+              </Box>
+
+              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4 }}>
+                {careerOpenings.map((job) => (
+                  <Box key={job.title} sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 3, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#d83b72', mb: 1 }}>{job.title}</Typography>
+                    <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: 3, color: 'text.secondary' }}>
+                      <Box component="span" sx={{ fontSize: '0.9rem' }}>📍 {job.location}</Box>
+                    </Stack>
+                    <Typography variant="subtitle2" sx={{ fontWeight: 700, color: 'text.primary', mb: 1 }}>Role and responsibilities</Typography>
+                    <Box component="ul" sx={{ pl: 2, mb: 3, color: 'text.secondary', fontSize: '0.95rem', '& li': { mb: 1.5 } }}>
+                      {job.responsibilities.map((resp, i) => (
+                        <Box component="li" key={i}>{resp}</Box>
+                      ))}
+                    </Box>
+                    <Typography variant="subtitle2" sx={{ fontWeight: 700, color: 'text.primary', mb: 1 }}>Desired skill set</Typography>
+                    <Typography variant="body2" sx={{ color: 'text.secondary', mb: 4 }}>{job.skills}</Typography>
+                    <Button variant="outlined" color="primary" href={`mailto:Info@swaja.com?subject=Application for ${job.title}`} sx={{ alignSelf: 'flex-start', mt: 'auto' }} endIcon={<ArrowOutwardIcon />}>Apply now</Button>
+                  </Box>
+                ))}
+              </Box>
             </Box>
 
             <Box id="contact" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
