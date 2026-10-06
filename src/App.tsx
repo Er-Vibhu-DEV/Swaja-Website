@@ -61,9 +61,9 @@ function App() {
          }}
        >
           <Container maxWidth="xl">
-            <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ height: { xs: 72, md: 88 } }}>
+            <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ height: { xs: 80, md: 100 } }}>
               <Button onClick={() => goTo('home')} sx={{ p: 0, minWidth: 0, color: 'text.primary', '&:hover': { bgcolor: 'transparent' } }}>
-                <Box component="img" src="/logo.svg" alt="Swaja Robotics Logo" sx={{ height: { xs: 36, md: 44 }, width: 'auto', display: 'block' }} />
+                <Box component="img" src="/logo.svg" alt="Swaja Robotics Logo" sx={{ height: { xs: 52, md: 72 }, width: 'auto', display: 'block' }} />
               </Button>
               <Stack direction="row" spacing={{ md: 3, lg: 5 }} alignItems="center" sx={{ display: { xs: 'none', md: 'flex' } }}>
                 {navItems.map((item) => <Link key={item.id} component="button" onClick={() => goTo(item.id)} underline="none" sx={{ color: 'text.primary', fontSize: '0.83rem', '&:hover': { color: 'primary.main' } }}>{item.label}</Link>)}
@@ -85,7 +85,7 @@ function App() {
         </Drawer>
 
         <Box component="main">
-          <Box id="home" component="section" sx={{ scrollMarginTop: { xs: '72px', md: '88px' }, minHeight: { xs: 450, md: 580 }, bgcolor: 'background.default', color: 'text.primary', position: 'relative', display: 'flex', alignItems: 'center', pt: { xs: '72px', md: '88px' } }}>
+          <Box id="home" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, minHeight: { xs: 450, md: 580 }, bgcolor: 'background.default', color: 'text.primary', position: 'relative', display: 'flex', alignItems: 'center', pt: { xs: '80px', md: '100px' } }}>
             <Container maxWidth="xl" sx={{ position: 'relative', pt: { xs: 2, md: 4 }, pb: { xs: 3, md: 5 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
               <Box sx={{ position: 'relative', zIndex: 1, maxWidth: { xs: '100%', md: 900 }, pt: 0, pb: { xs: 2, md: 4 }, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography component="h1" variant="h1" sx={{ maxWidth: 900, color: '#000000' }}>Swaja <Box component="span" sx={{ color: '#ffffff', bgcolor: '#000000', px: 1.5, py: 0.5, borderRadius: 1, display: 'inline-block' }}>Robotics</Box></Typography>
@@ -97,7 +97,7 @@ function App() {
           </Box>
 
           <Container maxWidth="xl">
-            <Box id="about" component="section" sx={{ scrollMarginTop: { xs: '72px', md: '88px' }, pt: { xs: 4, md: 6 }, pb: { xs: 10, md: 18 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <Box id="about" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, pt: { xs: 4, md: 6 }, pb: { xs: 10, md: 18 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
               <Box sx={{ maxWidth: 800, mx: 'auto' }}>
                 <Typography variant="overline" color="primary.main">01 / About us</Typography>
                 <Typography variant="h2" sx={{ mt: 2, mx: 'auto' }}>Bridging technology for India's future.</Typography>
@@ -107,7 +107,7 @@ function App() {
               </Box>
             </Box>
 
-            <Box id="careers" component="section" sx={{ scrollMarginTop: { xs: '72px', md: '88px' }, py: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
+            <Box id="careers" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, py: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
               <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 14 }}>
                 <Box sx={{ flex: 1 }}>
                   <Typography variant="overline" color="primary.main">02 / Careers</Typography>
@@ -121,7 +121,7 @@ function App() {
               </Stack>
             </Box>
 
-            <Box id="contact" component="section" sx={{ scrollMarginTop: { xs: '72px', md: '88px' }, py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
+            <Box id="contact" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
               <Box sx={{ mb: 8 }}>
                 <Typography variant="overline" color="primary.main">03 / Contact us</Typography>
                 <Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography>
