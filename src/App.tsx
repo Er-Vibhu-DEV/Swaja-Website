@@ -63,10 +63,7 @@ function App() {
           <Container maxWidth="xl">
             <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ height: { xs: 72, md: 88 } }}>
               <Button onClick={() => goTo('home')} sx={{ p: 0, minWidth: 0, color: 'text.primary', '&:hover': { bgcolor: 'transparent' } }}>
-                <Stack direction="row" spacing={1.25} alignItems="center">
-                  <Box component="img" src="/favicon.svg" alt="Swaja Robotics Logo" sx={{ width: 28, height: 28, borderRadius: 1 }} />
-                  <Typography sx={{ fontSize: { xs: '0.76rem', md: '0.88rem' }, letterSpacing: '0.16em', fontWeight: 700 }}>SWAJA ROBOTICS</Typography>
-                </Stack>
+                <Box component="img" src="/logo.svg" alt="Swaja Robotics Logo" sx={{ height: { xs: 36, md: 44 }, width: 'auto', display: 'block' }} />
               </Button>
               <Stack direction="row" spacing={{ md: 3, lg: 5 }} alignItems="center" sx={{ display: { xs: 'none', md: 'flex' } }}>
                 {navItems.map((item) => <Link key={item.id} component="button" onClick={() => goTo(item.id)} underline="none" sx={{ color: 'text.primary', fontSize: '0.83rem', '&:hover': { color: 'primary.main' } }}>{item.label}</Link>)}
