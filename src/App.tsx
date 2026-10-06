@@ -59,22 +59,27 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box sx={{ bgcolor: 'background.default', color: 'text.primary', overflow: 'hidden' }}>
-        <Box
-          component="header"
-          sx={{
-            position: 'fixed', top: 0, left: 0, right: 0, zIndex: theme.zIndex.appBar,
-            bgcolor: scrolled ? 'rgba(245,251,254,0.92)' : 'transparent',
-            borderBottom: scrolled ? 1 : 0, borderColor: 'divider', backdropFilter: scrolled ? 'blur(16px)' : 'none',
-            transition: 'all 240ms ease',
-          }}
-        >
+       <Box
+         component="header"
+         sx={{
+           position: 'fixed',
+           top: 0,
+           left: 0,
+           right: 0,
+           zIndex: theme.zIndex.appBar,
+           bgcolor: scrolled ? 'rgba(245,251,254,0.75)' : 'transparent',
+           borderBottom: scrolled ? 1 : 0,
+           borderColor: 'divider',
+           backdropFilter: scrolled ? 'blur(10px)' : 'none',
+           WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'none',
+           transition: 'all 240ms ease',
+         }}
+       >
           <Container maxWidth="xl">
             <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ height: { xs: 72, md: 88 } }}>
               <Button onClick={() => goTo('home')} sx={{ p: 0, minWidth: 0, color: 'text.primary', '&:hover': { bgcolor: 'transparent' } }}>
                 <Stack direction="row" spacing={1.25} alignItems="center">
-                  <Box sx={{ width: 26, height: 26, border: 2, borderColor: 'primary.main', display: 'grid', placeItems: 'center', transform: 'rotate(45deg)' }}>
-                    <Box sx={{ width: 7, height: 7, bgcolor: 'secondary.main' }} />
-                  </Box>
+                  <Box component="img" src="/favicon.svg" alt="Swaja Robotics Logo" sx={{ width: 28, height: 28, borderRadius: 1 }} />
                   <Typography sx={{ fontSize: { xs: '0.76rem', md: '0.88rem' }, letterSpacing: '0.16em', fontWeight: 700 }}>SWAJA ROBOTICS</Typography>
                 </Stack>
               </Button>
@@ -99,10 +104,10 @@ function App() {
         </Drawer>
 
         <Box component="main">
-          <Box id="home" component="section" sx={{ minHeight: { xs: 720, md: 850 }, bgcolor: 'background.default', color: 'text.primary', position: 'relative', display: 'flex', alignItems: 'center', pt: { xs: 10, md: 8 } }}>
-            <Container maxWidth="xl" sx={{ position: 'relative', py: { xs: 7, md: 10 }, display: { xs: 'flex', md: 'block' }, flexDirection: 'column' }}>
+          <Box id="home" component="section" sx={{ minHeight: { xs: 650, md: 780 }, bgcolor: 'background.default', color: 'text.primary', position: 'relative', display: 'flex', alignItems: 'center', pt: { xs: '72px', md: '88px' } }}>
+            <Container maxWidth="xl" sx={{ position: 'relative', pt: { xs: 0, md: 0 }, pb: { xs: 7, md: 10 }, display: { xs: 'flex', md: 'block' }, flexDirection: 'column' }}>
               <Box component="img" src="/swaja-hero.webp" alt="Robotic arm and custom machine in an engineering laboratory" sx={{ position: { xs: 'relative', md: 'absolute' }, right: { md: 0 }, top: { md: '50%' }, transform: { md: 'translateY(-50%)' }, width: { xs: '100%', md: '57%' }, height: { xs: 300, sm: 390, md: 580 }, order: { xs: 2, md: 0 }, objectFit: 'cover', borderRadius: 3, boxShadow: '0 24px 60px rgba(45,125,159,0.18)' }} />
-              <Box sx={{ position: 'relative', zIndex: 1, maxWidth: { xs: '100%', md: 620 }, py: { xs: 5, md: 10 }, order: { xs: 1, md: 0 } }}>
+              <Box sx={{ position: 'relative', zIndex: 1, maxWidth: { xs: '100%', md: 620 }, pt: { xs: 2, md: 4 }, pb: { xs: 5, md: 10 }, order: { xs: 1, md: 0 } }}>
                 <Stack direction="row" spacing={1.25} alignItems="center" sx={{ mb: 3 }}><Box sx={{ width: 34, height: 1, bgcolor: 'secondary.main' }} /><Typography variant="overline" sx={{ color: 'primary.main' }}>Robotics · Automation · Engineering</Typography></Stack>
                 <Typography component="h1" variant="h1" sx={{ maxWidth: 820 }}>Engineering<br /><Box component="span" sx={{ color: 'primary.main' }}>Beyond Limits.</Box></Typography>
                 <Typography sx={{ maxWidth: 540, mt: 4, color: 'text.secondary', fontSize: { xs: '1rem', md: '1.16rem' } }}>We design and develop innovative robotics, home automation solutions, and custom machines that bring intelligent technology into everyday life.</Typography>
@@ -135,7 +140,7 @@ function App() {
 
           <Container maxWidth="xl">
             <Box id="careers" component="section" sx={{ py: { xs: 10, md: 18 } }}><Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 5, md: 14 }}><Box sx={{ flex: 1 }}><Typography variant="overline" color="primary.main">05 / Careers</Typography><Typography variant="h2" sx={{ mt: 2 }}>Build the<br />future with us.</Typography></Box><Box sx={{ flex: 1, pt: { md: 5 } }}><Typography variant="body1" color="text.secondary">At Swaja Robotics, we believe the future of technology is built by people who are curious, creative, and passionate about solving real-world problems.</Typography><Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>If you are interested in robotics, automation, electronics, software, or innovative engineering, we would love to hear from you.</Typography><Button variant="contained" color="primary" sx={{ mt: 4 }} onClick={() => goTo('contact')} endIcon={<ArrowOutwardIcon />}>Get in touch</Button></Box></Stack></Box>
-            <Box id="contact" component="section" sx={{ py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}><Stack direction={{ xs: 'column', lg: 'row' }} spacing={{ xs: 6, lg: 16 }}><Box sx={{ flex: 1 }}><Typography variant="overline" color="primary.main">06 / Contact us</Typography><Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography><Typography color="text.secondary" sx={{ mt: 4, maxWidth: 430 }}>Have an automation idea or a custom machine requirement? Get in touch with us to discuss your requirements.</Typography></Box><Stack spacing={4} sx={{ minWidth: { lg: 330 } }}><Box><Typography variant="overline" color="text.secondary">Email</Typography><Link href="mailto:admin@gmail.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>admin@gmail.com</Link></Box><Box><Typography variant="overline" color="text.secondary">Location</Typography><Typography sx={{ mt: 1, maxWidth: 260 }}>Rajendrapuram, Ganga Nagar,<br />Meerut, Uttar Pradesh, India</Typography></Box><Box><Typography variant="overline" color="text.secondary">Website</Typography><Link href="https://swaja.com" target="_blank" rel="noreferrer" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>swaja.com ↗</Link></Box><Button href="mailto:admin@gmail.com" variant="contained" color="secondary" endIcon={<ArrowOutwardIcon />} sx={{ alignSelf: 'flex-start' }}>Start a conversation</Button></Stack></Stack></Box>
+            <Box id="contact" component="section" sx={{ py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}><Stack direction={{ xs: 'column', lg: 'row' }} spacing={{ xs: 6, lg: 16 }}><Box sx={{ flex: 1 }}><Typography variant="overline" color="primary.main">06 / Contact us</Typography><Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography><Typography color="text.secondary" sx={{ mt: 4, maxWidth: 430 }}>Have an automation idea or a custom machine requirement? Get in touch with us to discuss your requirements.</Typography></Box><Stack spacing={4} sx={{ minWidth: { lg: 330 } }}><Box><Typography variant="overline" color="text.secondary">Email</Typography><Link href="mailto:swajarobotics@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>swajarobotics@swaja.com</Link></Box><Box><Typography variant="overline" color="text.secondary">Location</Typography><Typography sx={{ mt: 1, maxWidth: 260 }}>Rajendrapuram, Ganga Nagar,<br />Meerut, Uttar Pradesh, India</Typography></Box><Box><Typography variant="overline" color="text.secondary">Website</Typography><Link href="https://swaja.com" target="_blank" rel="noreferrer" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>swaja.com ↗</Link></Box><Button href="mailto:swajarobotics@swaja.com" variant="contained" color="secondary" endIcon={<ArrowOutwardIcon />} sx={{ alignSelf: 'flex-start' }}>Start a conversation</Button></Stack></Stack></Box>
           </Container>
         </Box>
 
