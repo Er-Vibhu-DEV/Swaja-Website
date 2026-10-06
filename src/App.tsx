@@ -125,34 +125,34 @@ function App() {
             </Box>
 
             <Box id="contact" component="section" sx={{ py: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
-              <Stack direction={{ xs: 'column', lg: 'row' }} spacing={{ xs: 6, lg: 16 }}>
-                <Box sx={{ flex: 1 }}>
-                  <Typography variant="overline" color="primary.main">03 / Contact us</Typography>
-                  <Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography>
-                  <Typography color="text.secondary" sx={{ mt: 4, maxWidth: 430 }}>Have an automation idea or a custom machine requirement? Get in touch with us at any of our offices below.</Typography>
+              <Box sx={{ mb: 8 }}>
+                <Typography variant="overline" color="primary.main">03 / Contact us</Typography>
+                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640 }}>Let's build the future together.</Typography>
+                <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 530 }}>Have an automation idea or a custom machine requirement? Get in touch with us at any of our offices below.</Typography>
+              </Box>
+
+              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 4 }}>
+                <Box sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 3, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700, mb: 1 }}>Meerut Office</Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, fontWeight: 500 }}>(R&D and Production)</Typography>
+                  <Typography sx={{ mb: 3, color: 'text.secondary', fontSize: '0.95rem', lineHeight: 1.6 }}>B-8 Rajender Puram, Mawana Road,<br />Meerut 250001, Uttar Pradesh, India</Typography>
+                  <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 'auto', fontSize: '1rem', fontWeight: 500 }}>Info@swaja.com</Link>
                 </Box>
-                <Stack spacing={4} sx={{ minWidth: { lg: 380 } }}>
-                  <Box>
-                    <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700 }}>Meerut Office (R&D and Production)</Typography>
-                    <Typography sx={{ mt: 1, color: 'text.secondary', fontSize: '0.95rem' }}>B-8 Rajender Puram, Mawana Road,<br />Meerut 250001, Uttar Pradesh, India</Typography>
-                    <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1rem' }}>Info@swaja.com</Link>
-                  </Box>
-                  <Box>
-                    <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700 }}>Bangalore Office</Typography>
-                    <Typography sx={{ mt: 1, color: 'text.secondary', fontSize: '0.95rem' }}>4th Floor, 331, 5B Rd, EPIP Zone, Whitefield,<br />Bengaluru, Karnataka 560066</Typography>
-                    <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1rem' }}>Info@swaja.com</Link>
-                  </Box>
-                  <Box>
-                    <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700 }}>Hyderabad Office</Typography>
-                    <Typography sx={{ mt: 1, color: 'text.secondary', fontSize: '0.95rem' }}>Plot No 1339, Road No. 67 Jubilee Hills,<br />Hyderabad, Telangana 500033, India</Typography>
-                    <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1rem' }}>Info@swaja.com</Link>
-                  </Box>
-                  <Box>
-                    <Typography variant="overline" color="text.secondary">Website</Typography>
-                    <Link href="https://swaja.com" target="_blank" rel="noreferrer" underline="hover" color="text.primary" sx={{ display: 'block', mt: 1, fontSize: '1.1rem' }}>swaja.com ↗</Link>
-                  </Box>
-                </Stack>
-              </Stack>
+
+                <Box sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 3, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700, mb: 1 }}>Bangalore Office</Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, fontWeight: 500 }}>&nbsp;</Typography>
+                  <Typography sx={{ mb: 3, color: 'text.secondary', fontSize: '0.95rem', lineHeight: 1.6 }}>4th Floor, 331, 5B Rd, EPIP Zone, Whitefield,<br />Bengaluru, Karnataka 560066</Typography>
+                  <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 'auto', fontSize: '1rem', fontWeight: 500 }}>Info@swaja.com</Link>
+                </Box>
+
+                <Box sx={{ p: 4, bgcolor: 'background.paper', border: 1, borderColor: 'divider', borderRadius: 3, boxShadow: '0 12px 35px rgba(45,125,159,0.08)', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <Typography variant="overline" color="primary.main" sx={{ fontWeight: 700, mb: 1 }}>Hyderabad Office</Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, fontWeight: 500 }}>&nbsp;</Typography>
+                  <Typography sx={{ mb: 3, color: 'text.secondary', fontSize: '0.95rem', lineHeight: 1.6 }}>Plot No 1339, Road No. 67 Jubilee Hills,<br />Hyderabad, Telangana 500033, India</Typography>
+                  <Link href="mailto:Info@swaja.com" underline="hover" color="text.primary" sx={{ display: 'block', mt: 'auto', fontSize: '1rem', fontWeight: 500 }}>Info@swaja.com</Link>
+                </Box>
+              </Box>
             </Box>
           </Container>
         </Box>
