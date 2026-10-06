@@ -10,13 +10,13 @@ const theme = createTheme({
     divider: '#d8eaf1',
   },
   typography: {
-    fontFamily: '"Space Grotesk", "Roboto", "Helvetica", "Arial", sans-serif',
-    h1: { fontSize: 'clamp(2.4rem, 7vw, 8.5rem)', fontWeight: 500, lineHeight: 0.96, letterSpacing: '-0.07em' },
-    h2: { fontSize: 'clamp(2.2rem, 5vw, 6rem)', fontWeight: 500, lineHeight: 1, letterSpacing: '-0.06em' },
-    h3: { fontSize: 'clamp(1.75rem, 3vw, 3rem)', fontWeight: 500, letterSpacing: '-0.04em' },
+    fontFamily: '"Playfair Display", "Georgia", serif',
+    h1: { fontSize: 'clamp(2.4rem, 7vw, 8.5rem)', fontWeight: 700, fontStyle: 'italic', lineHeight: 0.96, letterSpacing: '-0.07em' },
+    h2: { fontSize: 'clamp(2.2rem, 5vw, 6rem)', fontWeight: 700, fontStyle: 'italic', lineHeight: 1, letterSpacing: '-0.06em' },
+    h3: { fontSize: 'clamp(1.75rem, 3vw, 3rem)', fontWeight: 700, fontStyle: 'italic', letterSpacing: '-0.04em' },
     body1: { fontSize: '1.05rem', lineHeight: 1.7 },
     body2: { fontSize: '0.9rem', lineHeight: 1.6 },
-    overline: { fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em' },
+    overline: { fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.18em', fontStyle: 'normal' },
   },
   shape: { borderRadius: 2 },
   components: {
