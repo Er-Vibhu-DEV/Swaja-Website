@@ -89,14 +89,9 @@ function App() {
 
         <Box component="main">
           <Box id="home" component="section" sx={{ minHeight: { xs: 550, md: 680 }, bgcolor: 'background.default', color: 'text.primary', position: 'relative', display: 'flex', alignItems: 'center', pt: { xs: '72px', md: '88px' } }}>
-            <Container maxWidth="xl" sx={{ position: 'relative', pt: 0, pb: { xs: 7, md: 10 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-              <Box sx={{ position: 'relative', zIndex: 1, maxWidth: { xs: '100%', md: 900 }, pt: 0, pb: { xs: 5, md: 10 }, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Typography component="h1" variant="h1" sx={{ maxWidth: 900, fontWeight: 900, textTransform: 'uppercase', lineHeight: 1.15 }}>
-                  SWAJA
-                  <Box component="span" sx={{ display: 'block', color: '#ffffff', bgcolor: '#000000', px: { xs: 2, md: 4 }, py: { xs: 0.5, md: 1 }, mt: { xs: 1, md: 1.5 }, fontStyle: 'italic', fontFamily: '"Playfair Display", "Georgia", serif', textTransform: 'none', fontWeight: 700, letterSpacing: '-0.02em', borderRadius: 1 }}>
-                    Robotics
-                  </Box>
-                </Typography>
+            <Container maxWidth="xl" sx={{ position: 'relative', pt: { xs: 4, md: 8 }, pb: { xs: 7, md: 10 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <Box sx={{ position: 'relative', zIndex: 1, maxWidth: { xs: '100%', md: 900 }, pt: { xs: 2, md: 4 }, pb: { xs: 5, md: 10 }, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Typography component="h1" variant="h1" sx={{ maxWidth: 900, color: '#000000' }}>Swaja <Box component="span" sx={{ color: '#ffffff', bgcolor: '#000000', px: 1.5, py: 0.5, borderRadius: 1, display: 'inline-block' }}>Robotics</Box></Typography>
                 <Stack direction="row" spacing={1.25} alignItems="center" justifyContent="center" sx={{ mt: 3, mb: 4 }}><Box sx={{ width: 34, height: 1, bgcolor: 'secondary.main' }} /><Typography variant="overline" sx={{ color: 'primary.main' }}>Robotics · Automation · Engineering</Typography></Stack>
                 <Typography sx={{ maxWidth: 640, mt: 3, color: 'text.secondary', fontSize: { xs: '1rem', md: '1.16rem' }, textAlign: 'center' }}>We design and develop innovative robotics, home automation solutions, and custom machines that bring intelligent technology into everyday life.</Typography>
               </Box>
@@ -105,13 +100,13 @@ function App() {
           </Box>
 
           <Container maxWidth="xl">
-            <Box id="about" component="section" sx={{ py: { xs: 10, md: 18 } }}>
-              <Box sx={{ maxWidth: 800 }}>
+            <Box id="about" component="section" sx={{ py: { xs: 10, md: 18 }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <Box sx={{ maxWidth: 800, mx: 'auto' }}>
                 <Typography variant="overline" color="primary.main">01 / About us</Typography>
-                <Typography variant="h2" sx={{ mt: 2, maxWidth: 650 }}>Engineering the future of automation.</Typography>
-                <Typography variant="body1" color="text.secondary" sx={{ mt: 4 }}>Swaja Robotics Pvt. Ltd. is a technology company focused on robotics, home automation, and custom machine development.</Typography>
-                <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>We combine software, electronics, automation, and robotics to create practical technology solutions designed around specific requirements.</Typography>
-                <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>Our goal is to push the boundaries of what is possible through innovative engineering and intelligent automation.</Typography>
+                <Typography variant="h2" sx={{ mt: 2, mx: 'auto' }}>Bridging technology for India's future.</Typography>
+                <Typography variant="body1" color="text.secondary" sx={{ mt: 4, fontSize: { xs: '1.05rem', md: '1.2rem' }, lineHeight: 1.8 }}>
+                  Swaja Robotics was founded with the insight that there is a large need to make the technology accessible to the next Billion people in India. This requires innovation in both device and content. Swaja Robotics is focused on creating these bridge devices.
+                </Typography>
               </Box>
             </Box>
 
