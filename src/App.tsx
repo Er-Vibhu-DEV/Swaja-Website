@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
