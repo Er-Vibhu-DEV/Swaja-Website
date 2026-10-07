@@ -155,7 +155,7 @@ function App() {
             <Box id="about" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, pt: { xs: 3, md: 4 }, pb: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
               <Box sx={{ maxWidth: 800, mx: 'auto' }}>
                 <Typography variant="overline" color="primary.main">01 / About us</Typography>
-                <Typography variant="h2" sx={{ mt: 2, mx: 'auto' }}>Bridging technology for India's future.</Typography>
+                <Typography variant="h2" sx={{ mt: 2, mx: 'auto', color: '#000000' }}>Bridging technology for India's future.</Typography>
                 <Typography variant="body1" color="text.secondary" sx={{ mt: 4, fontSize: { xs: '1.05rem', md: '1.2rem' }, lineHeight: 1.8 }}>
                   Swaja Robotics was founded with the insight that there is a large need to make the technology accessible to the next Billion people in India. This requires innovation in both device and content. Swaja Robotics is focused on creating these bridge devices.
                 </Typography>
@@ -165,7 +165,7 @@ function App() {
             <Box id="careers" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, pt: { xs: 3, md: 4 }, pb: { xs: 10, md: 18 }, borderTop: 1, borderColor: 'divider' }}>
               <Box sx={{ mb: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <Typography variant="overline" color="primary.main">02 / Careers</Typography>
-                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640, mx: 'auto' }}>Build the future with us.</Typography>
+                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640, mx: 'auto', color: '#000000' }}>Build the future with us.</Typography>
                 <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 600, mx: 'auto' }}>At Swaja Robotics, we believe the future of technology is built by people who are curious, creative, and passionate about solving real-world problems. Explore our open positions below.</Typography>
               </Box>
 
@@ -211,7 +211,7 @@ function App() {
             <Box id="contact" component="section" sx={{ scrollMarginTop: { xs: '80px', md: '100px' }, pt: { xs: 3, md: 4 }, pb: { xs: 10, md: 16 }, borderTop: 1, borderColor: 'divider' }}>
               <Box sx={{ mb: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <Typography variant="overline" color="primary.main">03 / Contact us</Typography>
-                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640, mx: 'auto' }}>Let's build the future together.</Typography>
+                <Typography variant="h2" sx={{ mt: 2, maxWidth: 640, mx: 'auto', color: '#000000' }}>Let's build the future together.</Typography>
                 <Typography color="text.secondary" sx={{ mt: 2, maxWidth: 530, mx: 'auto' }}>Have an automation idea or a custom machine requirement? Get in touch with us at any of our offices below.</Typography>
               </Box>
 
