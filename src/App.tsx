@@ -106,7 +106,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ bgcolor: 'background.default', color: 'text.primary', overflow: 'hidden' }}>
+      <Box sx={{ bgcolor: '#FFFFFF', color: 'text.primary', overflow: 'hidden' }}>
        <Box
          component="header"
          sx={{
@@ -115,7 +115,7 @@ function App() {
            left: 0,
            right: 0,
            zIndex: theme.zIndex.appBar,
-           bgcolor: scrolled ? 'rgba(245,251,254,0.75)' : 'transparent',
+           bgcolor: scrolled ? 'rgba(255,255,255,0.9)' : 'transparent',
            borderBottom: scrolled ? 1 : 0,
            borderColor: 'divider',
            backdropFilter: scrolled ? 'blur(10px)' : 'none',
@@ -346,11 +346,17 @@ function App() {
 
             </Box>
             <Divider sx={{ my: 4, borderColor: 'rgba(255,255,255,0.14)' }} />
-            <Box sx={{ width: '100%', textAlign: 'center', mt: 4 }}>
+            <Box sx={{ width: '100%', textAlign: 'center', mb: 3 }}>
               <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.45)' }}>
                 © 2021 Swaja Robotics Pvt. Ltd. All rights reserved.
               </Typography>
             </Box>
+            <Box sx={{ mb: 3, width: '100%', px: { xs: 2, md: 4 }, textAlign: 'center' }}>
+              <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.82rem', lineHeight: 1.5 }}>
+                Swaja Robotics is committed to maintaining a workplace environment free of sexual harassment and we believe that our employees are entitled to work in an environment free from any conduct which can be considered harassment, coercive or disruptive. Swaja Robotics’s policy against sexual harassment at the workplace is made pursuant to the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 (the “Act”) and the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Rules, 2013 (the “Rules”). For any POSH-related complaints or concerns, please write to <Link href="mailto:posh@swaja.com" underline="hover" sx={{ color: 'secondary.main', fontWeight: 600 }}>posh@swaja.com</Link>
+              </Typography>
+            </Box>
+            <Divider sx={{ mt: 3, mb: 2, borderColor: 'rgba(255,255,255,0.14)' }} />
           </Container>
         </Box>
       </Box>
